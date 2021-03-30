@@ -71,4 +71,5 @@ select#selectlng{
         -webkit-appearance: none;
         background-position-x: 23px;
         text-align-last: center;
+        background-size: 10px;
 }
