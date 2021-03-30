@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Signika";
+    box-sizing: border-box;
+}
+
+
+.headercontainer {
+    display: flex;
+}
+
+.header {}
+
+.headerlogo {
+    align-items: center;
+}
+
+.headerlogo img {
+    width: 30%;
+    height: 100%;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(to left, #00FFAA, #69C7DF);
+}
