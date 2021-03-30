@@ -7,23 +7,68 @@
 
 
 .headercontainer {
+    width: 100%;
+    height: 65px;
+    background-image: linear-gradient(to left, #00FFAA, #69C7DF);
     display: flex;
 }
 
-.header {}
-
-.headerlogo {
-    align-items: center;
+.header {
+    width: 90%;
+    padding: auto;
+    margin: auto;
 }
 
 .headerlogo img {
-    width: 30%;
-    height: 100%;
+    width: 16%;
+    height: 47%;
     align-items: center;
 }
 
-.header {
-    width: 100%;
-    height: 150px;
-    background-image: linear-gradient(to left, #00FFAA, #69C7DF);
+.headerlogo{
+    display: inline-flex;
+}
+
+.headermenu li{
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.headermenu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 20px;
+}
+
+.headermenu {
+    justify-content: space-around;
+    display: inline-flex;
+}
+
+.languageselect{
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+select#selectlng{
+        /* border-radius: 20px;
+        color: white;
+        background-color: black;
+        width: 138px;
+        height: 28px;
+        direction: rtl;
+        text-align-last: center; */
+        width: 162px;
+        padding: 5px;
+        font-size: 16px;
+        color: white;
+        /* line-height: 1; */
+        border: 0;
+        border-radius: 21px;
+        height: 34px;
+        /* background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat left #47AEE1; */
+        background: url(/assets/images/arrowdown.png) no-repeat left #47AEE1;
+        -webkit-appearance: none;
+        background-position-x: 23px;
+        text-align-last: center;
 }
