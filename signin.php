@@ -17,11 +17,11 @@
                 <h2><strong>Dont have an account?</strong></h2>
                 <h3>No worries, Create one below.</h3>
              </div>
-            <div class="buttons">
+        </header>
+        <div class="buttons">
                 <input type="button" value="Sign In">
                 <input type="button" value="Sign Up">
             </div>
-        </header>
     </main>
 </body>
 
