@@ -6,6 +6,52 @@
 .container{
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.5fr 1.5fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0.33fr 1.5fr 1.5fr;
+
+}
+
+.header{
+background-image: linear-gradient(to left, #00FFAA, #69C7DF);
+grid-column: 1/6;
+
+}
+
+.header img{
+width: 115px;
+height: 29px;
+grid-column: 2;
+grid-row: 2;
+}
+
+
+.logo{
+    display: grid;
+    grid-template-columns: repeat(10, 5% 10% );
+    grid-template-rows: 1fr 0.5fr 1fr;
+}
+
+.menu{
+display: inline-flex;
+}
+
+.menu ul{
+    width: 120px;
+}
+.menu li{
+    list-style-type: none;
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;    
+}
+
+.menucontainer{
+grid-column: 5;
+grid-row: 2;
+align-self: center;
+
+
 }
