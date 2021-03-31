@@ -24,8 +24,9 @@
 width: 100%;
 height: 58vh;
 display: flex;
-}
 
+}
+/* 
 .signinbg{
     display: flex;
     width: 80%;
@@ -46,4 +47,29 @@ display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+} */
+
+
+.divleft{
+
+    height: 353px;
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divleft img{
+    height: 232px;
+    width: 283px;
+}
+
+.divmiddle{
+    background-color: blueviolet;
+    height: 353px;
+    width: 33.33%;
+}
+.divright{
+    background-color: brown;
+    height: 353px;
+    width: 33.33%;
 }
