@@ -14,7 +14,7 @@
 
 
 
-    <form action="/includes/traitement.php" method="POST" enctype="multipart/form-data" style="width:50% ; margin-left:25%">
+    <form action="/Class-Management-App/includes/traitement.php" method="POST" enctype="multipart/form-data" style="width:50% ; margin-left:25%">
 
 
 
@@ -26,16 +26,16 @@
             <input class="form-control" type="hidden" name="brief_author">
         </div>
         <div class="form-group">
-            <label for="brief_status">Brief comp</label>
-            <input class="form-control" type="text" name="brief_status">
+            <label for="brief_comp">Brief comp</label>
+            <input class="form-control" type="text" name="brief_comp">
         </div>
         <div class="form-group">
             <label for="brief_image">Brief Image</label>
-            <input class="form-control" type="file" name="brief_image">
+            <input class="form-control" type="file" name="brief_img">
         </div>
         <div class="form-group">
             <label for="brief_tags">Brief Tags</label>
-            <input class="form-control" type="text" name="brief_tags">
+            <input class="form-control" type="text" name="brief_tag">
         </div>
         <div class="form-group">
             <label for="brief_content">Brief Content</label>
@@ -49,7 +49,7 @@
         <br>
 
         <input class="btn btn-primary" type="submit" value="Add Brief" name="add_brief">
-
+ 
 
     </form>
 

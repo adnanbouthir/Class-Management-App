@@ -84,5 +84,9 @@ if (isset($_POST['add_brief'])) {
 
     $add_post_result = mysqli_query($link, $add_post_querry);
 
+    if (!$add_post_result) {
+        die("Fatal error");
+    }
+
     header("Location: Succes.php");
 }
