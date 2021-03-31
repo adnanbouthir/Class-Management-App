@@ -14,7 +14,7 @@
 .header{
 background-image: linear-gradient(to left, #00FFAA, #69C7DF);
 grid-column: 1/6;
-
+height: 10vh;
 }
 
 .header img{
@@ -22,13 +22,14 @@ width: 115px;
 height: 29px;
 grid-column: 2;
 grid-row: 2;
+align-self: center;
 }
 
 
 .logo{
     display: grid;
     grid-template-columns: repeat(10, 5% 10% );
-    grid-template-rows: 1fr 0.5fr 1fr;
+    grid-template-rows: 0.2fr 0.1fr 0.2fr;
 }
 
 .menu{
@@ -66,3 +67,28 @@ border: none;
 height: 25px;
 box-shadow: 2px 4px 4px 0px #888888;
 }
+
+
+.profile-container img{
+    width: 45px;
+    height: 39px;
+    align-items: center;
+
+}
+.profile-container{ 
+    grid-column: 13;
+    grid-row: 2;
+    }
+
+
+    .notif-container img {
+        width: 45px;
+        height: 39px;
+        align-items: center;
+
+    }
+
+    .notif-container {   
+        grid-column: 14;
+        grid-row: 2;
+    }
