@@ -78,8 +78,23 @@ margin: 10px;
 color: black;
 }
 
+.email{
+height: 20px;
+width: 50%;
+border-radius: 20px;
+background-color: #ffffff;
+outline: none;
+border: solid 1px gray;
+}
 
-
+.password {
+    height: 20px;
+    width: 50%;
+    border-radius: 20px;
+    background-color: #ffffff;
+    outline: none;
+    border: solid 1px gray;
+}
 
 
 
@@ -88,3 +103,5 @@ color: black;
     height: 353px;
     width: 33.33%;
 }
+
+
