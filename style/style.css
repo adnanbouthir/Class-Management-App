@@ -7,23 +7,157 @@
 
 
 .headercontainer {
+    width: 100%;
+    height: 65px;
+    background-image: linear-gradient(to left, #00FFAA, #69C7DF);
     display: flex;
 }
 
-.header {}
-
-.headerlogo {
-    align-items: center;
+.header {
+    width: 90%;
+    padding: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .headerlogo img {
-    width: 30%;
-    height: 100%;
+    width: 100%;
+    height: 85%;
     align-items: center;
 }
 
-.header {
-    width: 100%;
-    height: 150px;
-    background-image: linear-gradient(to left, #00FFAA, #69C7DF);
+.headerlogo{
+    display: inline-flex;
+    width: 10%;
+    cursor: pointer;
 }
+
+.headermenu li{
+
+    list-style-type: none;
+}
+
+.headermenu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 20px;
+}
+
+.headermenu {
+    justify-content: space-around;
+    display: inline-flex;
+    align-items: center;
+}
+
+.languageselect{
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+#selectlng{
+        /* border-radius: 20px;
+        color: white;
+        background-color: black;
+        width: 138px;
+        height: 28px;
+        direction: rtl;
+        text-align-last: center; */
+        /* line-height: 1; */
+        /* background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat left #47AEE1; */
+        width: 162px;
+        padding: 5px;
+        font-size: 16px;
+        color: white;
+        border: 0;
+        border-radius: 21px;
+        height: 34px;
+        background: url(/assets/images/arrowdown.png) no-repeat left #47AEE1;
+        -webkit-appearance: none;
+        background-position-x: 23px;
+        text-align-last: center;
+        background-size: 10px;
+        outline:none;
+        cursor: pointer;
+}
+
+a::after{
+    content: '';
+    display: inline-flex;
+    width: 0;
+    height: 1px;
+}
+
+a:hover::after{
+width: 100%;
+}
+
+#selectlng:hover{
+    border: solid 2px rgb(255, 255, 255);
+}
+
+/* HEADER DONE */
+
+body{
+width: 100%;
+}
+
+
+.bodycontainer{
+    width: 80%;
+    height: 89vh;
+    margin: auto;
+    display: flex;
+}
+
+
+.bgimage{
+        width: 100%;
+        height: 100%;
+        /* background-image: url(/assets/images/bgimg.png);
+        background-size: 80%;
+        background-repeat: no-repeat; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+}
+
+.bgimage img {
+width: 100%;
+height: 80%;
+}
+
+span{
+    color: #47AEE1;
+    font-family: sans-serif;
+}
+
+.paragraphtitle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 18px;
+}
+
+h1{
+    font-size: 48px;
+    font-family: sans-serif;
+}
+
+button{
+    width: 90px;
+    height: 30px;
+    border-radius: 21px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: #47AEE1;
+    color: white;
+}
+button:hover{
+    border: solid 2px #00FFAA;
+}
+/* STYLE HOME PAGE DONE */
+
+
