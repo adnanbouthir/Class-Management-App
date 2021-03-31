@@ -16,4 +16,34 @@
     justify-content: center;
     align-items: center;
     color: white;
+    font-size: 15px;
+}
+
+
+.bot{
+width: 100%;
+height: 58vh;
+display: flex;
+}
+
+.signinbg{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+}
+
+.signinbg img{
+    height: 232px;    
+    width: 283px;
+}
+
+.signincontainer{
+    display: flex;
+    height: 58vh;
+    width: 500px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
