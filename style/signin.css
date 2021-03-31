@@ -1,8 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 
 .top {
     width: 100%;
     height: 240px;
-    background-image:url(/assets/images/topbg.png);
+    background-image:url(../assets/images/topbg.png);
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
@@ -190,8 +194,9 @@ justify-content: center;
 
 
 .fbbut {
+    margin: 20px;
     color: white;
-    width: 70%;
+    width: 64%;
     height: 35px;
     border: solid black;
     border-radius: 4px;
@@ -201,8 +206,9 @@ justify-content: center;
 
 
 .ggbut {
+        margin-left: 20px;
     color: white;
-    width: 70%;
+    width: 64%;
     height: 35px;
     border: solid #69C7DF;
     border-radius: 4px;
