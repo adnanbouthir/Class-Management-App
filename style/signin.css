@@ -163,10 +163,57 @@ margin: 10px;
 }
 
 
+.or{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 64px;
+        align-items: center;
+}
+
+
+
+.thirdbox {
+width: 600px;
+display: flex;
+justify-content: center;
+}
+
+
+.socbut {
+    margin: auto;
+    width: 100%;
+}
+
+
+
+
+
+.fbbut {
+    color: white;
+    width: 70%;
+    height: 48px;
+    border: solid black;
+    border-radius: 4px;
+    background-color: black;
+    cursor: pointer;
+}
+
+
+.ggbut {
+    color: white;
+    width: 70%;
+    height: 35px;
+    border: solid #69C7DF;
+    border-radius: 4px;
+    background-color: #69C7DF;
+    cursor: pointer;
+}
+
 
 
 .divright{
-    background-color: brown;
+    background-color: rgb(255, 255, 255);
     height: 353px;
     width: 33.33%;
 }
