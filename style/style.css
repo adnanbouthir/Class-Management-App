@@ -63,15 +63,15 @@
         height: 28px;
         direction: rtl;
         text-align-last: center; */
+        /* line-height: 1; */
+        /* background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat left #47AEE1; */
         width: 162px;
         padding: 5px;
         font-size: 16px;
         color: white;
-        /* line-height: 1; */
         border: 0;
         border-radius: 21px;
         height: 34px;
-        /* background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat left #47AEE1; */
         background: url(/assets/images/arrowdown.png) no-repeat left #47AEE1;
         -webkit-appearance: none;
         background-position-x: 23px;
@@ -158,3 +158,6 @@ button{
 button:hover{
     border: solid 2px #00FFAA;
 }
+/* STYLE HOME PAGE DONE */
+
+
