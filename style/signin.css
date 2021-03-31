@@ -50,7 +50,6 @@ display: flex;
 
 
 .divleft{
-
     height: 353px;
     width: 33.33%;
     display: flex;
@@ -63,14 +62,22 @@ display: flex;
 }
 
 .divmiddle{
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
     height: 353px;
     width: 33.33%;
-    display: flex;
 }
 
-.divmiddle li{
+.navsign{
+width: 100%;
+height: 10%;
+}
+
+
+.divmiddle ul{
+    font-family: monospace;
+    font-size: 12px;
     list-style-type: none;
+    display: inline-flex;
 }
 
 .divmiddle a{
@@ -79,43 +86,134 @@ margin: 10px;
 color: black;
 }
 
+.formcontainer{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+
+}
+
 .email{
-height: 20px;
-width: 50%;
-border-radius: 20px;
+width : 60%;
+height: 30px;
+border-radius: 10px;
 background-color: #ffffff;
 outline: none;
 border: solid 1px gray;
+margin: 10px;
 }
 
 .password {
-    height: 20px;
-    width: 50%;
-    border-radius: 20px;
+    height: 30px;
+    width : 60%;
+    border-radius: 10px;
     background-color: #ffffff;
     outline: none;
     border: solid 1px gray;
+    margin: 10px;
 }
 
 .signin{
-        height: 20px;
-        width: 50%;
+        height: 30px;
+        width: 60%;
         border-radius: 7px;
         outline: none;
         border: solid 1px gray;
+        margin: 10px;
+        background-color: #69C7DF;
+        color: white;
 }
 
-.formcontainer{
-    width: 100%;
-    height: 100%;
+
+
+.footsign {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
+
+.footsign h1 {
+    font-size: 10px;
+    color: grey;
+    cursor: pointer;
+}
+
+
+
+.footsigncontainer {
+    margin: auto;
+    width: 60%;
+}
+
+.stay {
+    font-size: 10px;
+    color: grey;
+    cursor: pointer;
+}
+
+.sc {
+    position: relative;
+    top: 3px;
+}
+
+
+
+.navsign a:hover{
+    text-decoration: underline #69C7DF;
+
+}
+
+
+.or{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 24px;
+        align-items: center;
+}
+
+
+
+.thirdbox {
+width: 600px;
+display: flex;
+justify-content: center;
+}
+
+
+.socbut {
+    margin: auto;
+    width: 100%;
+}
+
+
+
+
+
+.fbbut {
+    color: white;
+    width: 70%;
+    height: 35px;
+    border: solid black;
+    border-radius: 4px;
+    background-color: black;
+    cursor: pointer;
+}
+
+
+.ggbut {
+    color: white;
+    width: 70%;
+    height: 35px;
+    border: solid #69C7DF;
+    border-radius: 4px;
+    background-color: #69C7DF;
+    cursor: pointer;
+}
+
 
 
 .divright{
-    background-color: brown;
+    background-color: rgb(255, 255, 255);
     height: 353px;
     width: 33.33%;
 }
