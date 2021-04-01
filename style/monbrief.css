@@ -112,7 +112,7 @@
 .skills{
 align-self: flex-end;
 grid-row-end: 4;
-grid-column: 3/7;
+grid-column: 19/26;
 color: #00FFAA;
 font-weight: bold;
 }
@@ -158,6 +158,172 @@ font-weight: bold;
 }
 
 .yes img {
+    height: 50%;
+    width: 50%;
+}
+
+/* STYLE SECONDE CARD */
+
+
+.skillcontainer1 {
+    background-color: white;
+    box-shadow: -3px -1px 0px 4px #47AEE1;
+    grid-row: 5/10;
+    grid-column: 12/19;
+    border-radius: 20px;
+}
+
+.todo1 {
+    text-align: center;
+    grid-row: 6;
+    grid-column: 12/20;
+}
+
+
+
+
+
+
+
+.no3 {
+    grid-column: 13;
+    grid-row: 8;
+}
+
+.no3 img {
+    height: 50%;
+    width: 50%;
+}
+
+.no4 {
+    grid-column: 15;
+    grid-row: 8;
+}
+
+.no4 img {
+    height: 50%;
+    width: 50%;
+}
+
+
+.yes1 {
+    grid-column: 17;
+    grid-row: 8;
+}
+
+.yes1 img {
+    height: 50%;
+    width: 50%;
+}
+
+
+
+/* STYLE THIRD CARD */
+
+
+.skillcontainer2 {
+    background-color: white;
+    box-shadow: -3px -1px 0px 4px #47AEE1;
+    grid-row: 5/10;
+    grid-column: 23/30;
+    border-radius: 20px;
+}
+
+.todo2 {
+    text-align: center;
+    grid-row: 6;
+    grid-column: 23/30;
+}
+
+
+
+
+
+
+
+.no5 {
+    grid-column: 24;
+    grid-row: 8;
+}
+
+.no5 img {
+    height: 50%;
+    width: 50%;
+}
+
+.no6 {
+    grid-column: 26;
+    grid-row: 8;
+}
+
+.no6 img {
+    height: 50%;
+    width: 50%;
+}
+
+
+.yes2 {
+    grid-column: 28;
+    grid-row: 8;
+}
+
+.yes2 img {
+    height: 50%;
+    width: 50%;
+}
+
+
+
+
+/* STYLE FOURTH CARD */
+
+.skillcontainer3 {
+    background-color: white;
+    box-shadow: -3px -1px 0px 4px #47AEE1;
+    grid-row: 5/10;
+    grid-column: 32/39;
+    border-radius: 20px;
+}
+
+.todo3 {
+    text-align: center;
+    grid-row: 6;
+    grid-column: 32/39;
+}
+
+
+
+
+
+
+
+.no7 {
+    grid-column: 33;
+    grid-row: 8;
+}
+
+.no7 img {
+    height: 50%;
+    width: 50%;
+}
+
+.no8 {
+    grid-column: 35;
+    grid-row: 8;
+}
+
+.no8 img {
+    height: 50%;
+    width: 50%;
+}
+
+
+.yes3 {
+    grid-column: 37;
+    grid-row: 8;
+}
+
+.yes3 img {
     height: 50%;
     width: 50%;
 }
