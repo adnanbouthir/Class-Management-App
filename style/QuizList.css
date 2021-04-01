@@ -113,12 +113,12 @@ align-items: center;
 
 
 .quizscontainer{
-    display: flex;
-    width: 1260px;
-    height: 320px;
-    position: relative;
-    z-index: 2;
-
+left: 86px;
+/* display: flex; */
+/* width: 1317px; */
+/* height: 320px; */
+position: relative;
+z-index: 2;
 }
 
 .quizs{
@@ -295,4 +295,12 @@ align-items: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+
+.languagescontainer a:hover {
+    color: #47E1AE;
+    text-decoration: underline #47E1AE;
+    font-weight: bold;
 }
