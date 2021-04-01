@@ -103,15 +103,15 @@
 
 .skillscontainer{
     background-color: white;
-    box-shadow: 5px 6px 11px 0px #888888;
-    grid-row: 3/11;
+    box-shadow: 1px 1px 11px 0px #888888;   
+    grid-row: 4/11;
     grid-column: 2/40;
     border-radius: 20px;
 }
 
 .skills{
 align-self: flex-end;
-grid-row-end: 4;
+grid-row-end: 5;
 grid-column: 19/26;
 color: #00FFAA;
 font-weight: bold;
@@ -341,13 +341,13 @@ grid-row: 13/30;
 .BriefImageContainer{
     grid-row: 13/30;
     grid-column: 3/15;
-    border: solid 1px black;
+    border: dashed 1px black;
 }
 
 .BriefContainer{
         grid-row: 13/30;
         grid-column: 16/39;
-        border: solid 1px black;
+        border: dashed 1px black;
 }
 
 
@@ -392,6 +392,14 @@ grid-row: 15;
     background-color: white;
     text-align: center;
     grid-column: 28/30;
+    grid-row: 22/24;
+    border-radius: 20px;
+}
+
+.tag4 {
+    background-color: white;
+    text-align: center;
+    grid-column: 32/35;
     grid-row: 22/24;
     border-radius: 20px;
 }
