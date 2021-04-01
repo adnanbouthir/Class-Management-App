@@ -40,3 +40,26 @@ if(isset($_POST['submitQuestion'])) {
             
         }
     }
+    $query = 
+    " INSERT INTO `questions`" .
+    " VALUES('', '$questionNumber', '$question', '$answer', '$imagePath', '$subject')";
+
+$result = mysqli_query($con, $query);
+
+if($result) {
+    header("Location: http://localhost/quizapp/upload_subject.php");    
+    exit();               
+}
+else
+{
+    die('Insert error');   
+} 
+ 
+}
+else
+{
+header("Location: http://localhost/Class-Management-App/quiz.php");    
+exit(); 
+}
+
+?>
