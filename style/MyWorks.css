@@ -1,0 +1,13 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(100, 1fr);
+
+}
