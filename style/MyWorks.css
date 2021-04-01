@@ -8,7 +8,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(40, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 
 }
 
@@ -99,4 +99,12 @@
 .notif-container {
     grid-column: 14;
     grid-row: 2;
+}
+
+
+.MyWorksTitle{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
 }
