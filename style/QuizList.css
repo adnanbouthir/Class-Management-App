@@ -325,6 +325,6 @@ z-index: 2;
 
 .languagescontainer a:hover{
     color: #47E1AE;
-    text-decoration: underline #47E1AE;
-    font-weight: bold;
+    text-decoration: underline wavy #47E1AE;
+    font-weight: bolder;
 }
