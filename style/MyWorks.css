@@ -111,58 +111,109 @@ align-items: center;
 
 .cardscontainer{
     display: flex;
-    background-color: rgb(255, 255, 255);
     width: 1260px;
     height: 320px;
     
 }
 
 .cards{
-       display: flex;
-       justify-content: space-between;
-        flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
 }
 
 .card1 {
     margin: 20px;
-    background-color: brown;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
     width: 200px;
     height: 280px;
+    border-radius: 10px;
+
 }
 
 
 .card2 {
     margin: 20px;
-    background-color: brown;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
     width: 200px;
     height: 280px;
 }
 
 .card3 {
     margin: 20px;
-    background-color: brown;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
     width: 200px;
     height: 280px;
+    border-radius: 10px;
 }
 
 .card4 {
     margin: 20px;
-    background-color: brown;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
     width: 200px;
     height: 280px;
+    border-radius: 10px;
 }
 
 .card5 {
     margin: 20px;
-    background-color: brown;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
     width: 200px;
     height: 280px;
+    border-radius: 10px;
 }
 
 .card6 {
     margin: 20px;
-    background-color: brown;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
     width: 200px;
     height: 280px;
 }
+
+
+.card7 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+}
+
+.card8 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+}
+
+.card9 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+}
+
+.card10 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+}
+
+
