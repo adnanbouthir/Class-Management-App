@@ -13,11 +13,11 @@ if (isset($_POST['signup_submit'])) {
     $password_signup = $_POST['password'];
     $rpassword_signup = $_POST['rpassword'];
 
-// Clean form input :
+    // Clean form input :
     $Fname_signup = strip_tags($Fname_signup);
     $Fname_signup = str_replace(' ', '', $Fname_signup);
     $Fname_signup = strtolower($Fname_signup);
-    
+
     $Lname_signup = strip_tags($Lname_signup);
     $Lname_signup = str_replace(' ', '', $Lname_signup);
     $Lname_signup = strtolower($Lname_signup);
@@ -82,7 +82,7 @@ if (isset($_POST['add_brief'])) {
 
 
     $destination_path = "C:\\xampp\htdocs\Class-Management-App\assets\images\\";                ///// A COMPRENDRE
-    $target_path = $destination_path . basename($post_image);
+    $target_path = $destination_path . basename($brief_img);
     move_uploaded_file($brief_img_temp, $target_path);
 
     $brief_tag = $_POST['brief_tag'];
