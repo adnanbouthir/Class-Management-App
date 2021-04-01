@@ -235,6 +235,11 @@ align-items: center;
     font-size: 16px;
     text-align: center;
 }
+.cards p {
+    font-size: 24px;
+    text-align: center;
+    color: green;
+}
 
 .circlecontainer{
     height: 200px;
@@ -247,5 +252,9 @@ align-items: center;
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    background-color: green;
+    background-color: #47E1AE;
+}
+
+.cards span  p{
+    color: red;
 }
