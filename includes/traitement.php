@@ -2,7 +2,7 @@
 
 include_once('./database.php');
 //signup Query
-
+$message ='';
 
 if (isset($_POST['signup_submit'])) {
 
@@ -26,6 +26,12 @@ if (isset($_POST['signup_submit'])) {
     $email_signup = str_replace(' ', '', $email_signup);
     $email_signup = strtolower($email_signup);
 
+    
+
+    $password_signup = md5($password_signup);
+        
+    
+
 
     session_start();
 
@@ -40,7 +46,7 @@ if (isset($_POST['signup_submit'])) {
         $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup')";
 
         $result_signup = mysqli_query($link, $query_signup);
-        header("Location: ../signin.php");
+        header("Location: http://localhost/Class-Management-App/signin.php");
     }
 }
 //signin querry
