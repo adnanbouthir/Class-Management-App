@@ -33,14 +33,14 @@ if (isset($_POST['signup_submit'])) {
     $email_resultat = mysqli_query($link, $email_query);
     if (mysqli_num_rows($email_resultat) > 0) {
         $_SESSION['email_taken'] = "Sorry... email already taken";
-        header("Location: signup.php");
+        header("Location: ../signup.php");
     } else if ($password_signup != $rpassword_signup) {
         $_SESSION['pass_no_match'] = "Password doesn't match";
     } else {
         $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup')";
 
         $result_signup = mysqli_query($link, $query_signup);
-        header("Location: signin.php");
+        header("Location: ../signin.php");
     }
 }
 //signin querry
@@ -61,9 +61,9 @@ if (isset($_POST['signin_submit'])) {
 
         $_SESSION['username'] = $row['user_email'];
 
-        header("Location: index.php");
+        header("Location: ../index.php");
     } else {
-        header("Location: signin.php?error=Sorry... username or password invalid");   //if isset
+        header("Location: ../signin.php?error=Sorry... username or password invalid");   //if isset
     }
 }
 
