@@ -2,7 +2,7 @@
 
 include_once('./database.php');
 //signup Query
-
+$message ='';
 
 if (isset($_POST['signup_submit'])) {
 
@@ -25,6 +25,9 @@ if (isset($_POST['signup_submit'])) {
     $email_signup = strip_tags($email_signup);
     $email_signup = str_replace(' ', '', $email_signup);
     $email_signup = strtolower($email_signup);
+    
+        
+    
 
 
     session_start();
@@ -37,11 +40,13 @@ if (isset($_POST['signup_submit'])) {
     } else if ($password_signup != $rpassword_signup) {
         $_SESSION['pass_no_match'] = "Password doesn't match";
     } else {
+
         $password_signup = md5($password_signup);
         $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password` ,`user_role`, `num_class`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup','2','0')";
 
+
         $result_signup = mysqli_query($link, $query_signup);
-        header("Location: ../signin.php");
+        header("Location: http://localhost/Class-Management-App/signin.php");
     }
 }
 //signin querry
