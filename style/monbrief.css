@@ -401,5 +401,17 @@
     grid-column: 3/39;
     background-color: rgb(255, 255, 255);
     border: dashed 1px black;
-    grid-row: 42/100;
+    grid-row: 45/93;
+}
+
+
+.BriefDeadlineContent{
+        grid-column: 4/38;
+        grid-row: 50;
+}
+
+
+.BriefDeadline{
+        grid-column: 4/38;
+        grid-row: 55;
 }
