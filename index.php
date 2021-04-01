@@ -18,12 +18,12 @@
                 <div class="headermenu">
                     <li>
                         <ul>
-                            <a href=""> Sign In </a>
+                            <a href="./signin.php"> Sign In </a>
                         </ul>
                     </li>
                     <li>
                         <ul>
-                            <a href=""> Sign Up </a>
+                            <a href="./signup.php"> Sign Up </a>
                         </ul>
                     </li>
                     <li>
