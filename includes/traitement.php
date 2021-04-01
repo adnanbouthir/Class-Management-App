@@ -37,7 +37,7 @@ if (isset($_POST['signup_submit'])) {
     } else if ($password_signup != $rpassword_signup) {
         $_SESSION['pass_no_match'] = "Password doesn't match";
     } else {
-        $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup')";
+        $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password` ,`user_role`, `user_class`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup','2','1')";
 
         $result_signup = mysqli_query($link, $query_signup);
         header("Location: ../signin.php");
@@ -105,4 +105,23 @@ if (isset($_POST['add_brief'])) {
     }
 
     header("Location: Succes.php");
+}
+
+
+
+// trainer add class
+
+
+if (isset($_POST['add_class'])) {
+
+    $_POST['num_class'] = $num_class;
+
+    $_POST['name_class'] = $name_class;
+
+
+
+
+    $class_query = "INSERT INTO `class`(`num_class`, `name_class`) VALUES ('$num_class','$name_class')";
+
+    $class_result = mysqli_query($link, $class_query);
 }
