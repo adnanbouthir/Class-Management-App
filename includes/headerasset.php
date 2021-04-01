@@ -1,12 +1,12 @@
 <div class="container">
     <div class="header">
         <div class="logo">
-            <img src="assets/images/logo.png" alt="">
+            <img src="../assets/images/logo.png" alt="">
             <div class="menucontainer">
                 <div class="menu">
                     <li>
                         <ul>
-                            <a href="./MesBriefs.php"> My Briefs </a>
+                            <a href="../MesBriefs.php"> My Briefs </a>
                         </ul>
                     </li>
                     <li>
@@ -29,11 +29,11 @@
             </div>
             <!-- profile icon -->
             <div class="profile-container">
-                <img src="assets/images/user.png" alt="">
+                <img src="../assets/images/user.png" alt="">
 
             </div>
             <div class="notif-container">
-                <img src="assets/images/notification.png" alt="">
+                <img src="../assets/images/notification.png" alt="">
             </div>
         </div>
     </div>
