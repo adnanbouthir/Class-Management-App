@@ -25,10 +25,7 @@ if (isset($_POST['signup_submit'])) {
     $email_signup = strip_tags($email_signup);
     $email_signup = str_replace(' ', '', $email_signup);
     $email_signup = strtolower($email_signup);
-
     
-
-    $password_signup = md5($password_signup);
         
     
 
@@ -43,6 +40,8 @@ if (isset($_POST['signup_submit'])) {
     } else if ($password_signup != $rpassword_signup) {
         $_SESSION['pass_no_match'] = "Password doesn't match";
     } else {
+        
+        $password_signup = md5($password_signup);
         $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup')";
 
         $result_signup = mysqli_query($link, $query_signup);
@@ -57,6 +56,7 @@ if (isset($_POST['signin_submit'])) {
     session_start();
     $email_signin = $_POST['signin_email'];
     $password_signin = $_POST['signin_password'];
+    $password_signin = md5($password_signin);
 
 
     $signin_querry = "SELECT * FROM `users` WHERE `user_email`='$email_signin' AND `user_password`='$password_signin' ";
