@@ -111,12 +111,12 @@ include_once("../includes/database.php");
             $zero = "0";
             ?>
             <select name="num_class" id="distable">
-
+                
                 <?php
                 $display_class_query = "SELECT * FROM `class`";
 
                 $class_result = mysqli_query($link, $display_class_query);
-                echo "<option value='$zero'>NO CLASS</option>";
+echo "<option value='$zero'>NO CLASS</option>";
                 foreach ($class_result as $row) {
                     $name_class = $row['name_class'];
                     $num_class = $row['num_class'];

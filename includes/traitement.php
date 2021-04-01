@@ -96,11 +96,15 @@ if (isset($_POST['add_brief'])) {
 
     $brief_content = $_POST['brief_content'];
 
-    $add_post_querry = "INSERT INTO `briefs`( `brief_title`, `brief_img`, `brief_tag`, `brief_comp`, `brief_deadline`, `brief_content`) VALUES ('$brief_title','$brief_img','$brief_tag','$brief_comp','$brief_deadline','$brief_content')";
+    $brief_class = $_POST['brief_class'];
+
+    $add_post_querry = "INSERT INTO `briefs`( `brief_title`, `brief_img`, `brief_tag`, `brief_comp`, `brief_deadline`, `brief_content`, `brief_class`) VALUES ('$brief_title','$brief_img','$brief_tag','$brief_comp','$brief_deadline','$brief_content',`$brief_class`)";
 
     $add_post_result = mysqli_query($link, $add_post_querry);
 
     if (!$add_post_result) {
+        var_dump($_POST);
+        mysqli_error($add_post_querry);
         die("Fatal error");
     }
 
