@@ -37,7 +37,7 @@ if (isset($_POST['signup_submit'])) {
     } else if ($password_signup != $rpassword_signup) {
         $_SESSION['pass_no_match'] = "Password doesn't match";
     } else {
-        $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password` ,`user_role`, `user_class`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup','2','1')";
+        $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password` ,`user_role`, `num_class`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup','2','0')";
 
         $result_signup = mysqli_query($link, $query_signup);
         header("Location: ../signin.php");
@@ -124,7 +124,7 @@ if (isset($_POST['add_class'])) {
         $class_query = "INSERT INTO `class`(`num_class`, `name_class`) VALUES ('$num_class','$name_class')";
 
         $class_result = mysqli_query($link, $class_query);
-    }else{
+    } else {
 
         header("Location: addclass.php?empty");
     }

@@ -108,19 +108,20 @@ include_once("../includes/database.php");
         </form>
         <form action="index.php" method="POST">
             <?php //assignclass.php 
+            $zero = "0";
             ?>
             <select name="num_class" id="distable">
+
                 <?php
                 $display_class_query = "SELECT * FROM `class`";
 
                 $class_result = mysqli_query($link, $display_class_query);
-
+                echo "<option value='$zero'>NO CLASS</option>";
                 foreach ($class_result as $row) {
                     $name_class = $row['name_class'];
                     $num_class = $row['num_class'];
                     echo "<option value='$num_class'>$name_class</option>";
                 }
-
 
                 ?>
                 <input type="submit" value="display class">
@@ -131,31 +132,35 @@ include_once("../includes/database.php");
 
 
 
-<!-- Display class list -->
+        <!-- Display class list -->
 
 
         <?php if (!empty($_POST['num_class'])) :
             $num_class = $_POST['num_class'];
             $display_class_membre = "SELECT * FROM `users` WHERE `num_class`='$num_class'";
-            $membre_result = mysqli_query($link, $display_class_membre); ?>
+            $membre_result = mysqli_query($link, $display_class_membre);
+
+            if (mysqli_num_rows($membre_result) > 0) {
+
+        ?>
 
 
-            <div class="col-xs-6">
+                <div class="col-xs-6">
 
-                <h1>Liste d'étudiant de la classe <?php echo $num_class; ?></h1>
-                <table class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Fist Name</th>
-                            <th>Last Name</th>
-                            <th>Birthday</th>
-                            <th>Class</th>
-                            <th>Email</th>
-                            <th>Action</th>
-                            <th><?php echo $num_class; ?></th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                    <h1>Liste d'étudiant de la classe <?php echo $num_class; ?></h1>
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Fist Name</th>
+                                <th>Last Name</th>
+                                <th>Birthday</th>
+                                <th>Class</th>
+                                <th>Email</th>
+                                <th>Action</th>
+                                <th><?php echo $num_class; ?></th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
 
                         <?php   //Find all categories query
@@ -180,23 +185,25 @@ include_once("../includes/database.php");
                             echo "<td> <a href='./index.php?delete=$user_id'> Delete </a>/<a href='././index.php?update=$user_id'> Update </a></td>";
                             echo "</tr>";
                         }
-
+                    } else {
+                        echo "<h1 style ='color:red;'>Aucun étudiant n'est inscrit dans cette classe</h1>";
+                    }
                         ?>
+                        </tbody>
+                    </table>
 
 
 
 
 
 
+                <?php
+            endif;
+
+                ?>
 
 
-                    <?php
-                endif;
-
-                    ?>
-
-
-            </div>
+                </div>
 
 
 
