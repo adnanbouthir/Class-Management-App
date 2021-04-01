@@ -12,7 +12,7 @@
     <div class="container">
         <div class="header"> 
             <div class="logo">
-            <img src="assets/images/logo.png" alt=""> 
+            <img src="assets/images/logo.png" alt="youcode"> 
             <div class="menucontainer"> 
             <div class="menu">
                 <li>

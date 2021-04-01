@@ -48,7 +48,7 @@ No worries Create an account below.
             </li>
                 
             <li>        
-                <a href="#" style="font-weight: 100; color: gray">Sign up
+                <a href="./signup.php" style="font-weight: 100; color: gray">Sign up
                 </a>
                 </li>
             </ul>
