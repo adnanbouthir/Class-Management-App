@@ -114,14 +114,18 @@ if (isset($_POST['add_brief'])) {
 
 if (isset($_POST['add_class'])) {
 
-    $_POST['num_class'] = $num_class;
+    $num_class = $_POST['num_class'];
 
-    $_POST['name_class'] = $name_class;
-
-
+    $name_class = $_POST['name_class'];
 
 
-    $class_query = "INSERT INTO `class`(`num_class`, `name_class`) VALUES ('$num_class','$name_class')";
+    if (!empty($num_class) || !empty($name_class)) {
 
-    $class_result = mysqli_query($link, $class_query);
+        $class_query = "INSERT INTO `class`(`num_class`, `name_class`) VALUES ('$num_class','$name_class')";
+
+        $class_result = mysqli_query($link, $class_query);
+    }else{
+
+        header("Location: addclass.php?empty");
+    }
 }
