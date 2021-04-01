@@ -48,7 +48,7 @@ No worries Create an account below.
             </li>
                 
             <li>        
-                <a href="#" style="font-weight: 100; color: gray">Sign up
+                <a href="./signup.php" style="font-weight: 100; color: gray">Sign up
                 </a>
                 </li>
             </ul>
@@ -56,11 +56,7 @@ No worries Create an account below.
 
 
 <div class="formcontainer">
-<<<<<<< Updated upstream
-<form action="" method="post" class="signinform">
-=======
 <form action="./includes/traitement.php" method="post" class="signinform">
->>>>>>> Stashed changes
         <input type="email" name="signin_email" placeholder="   Email" class="email" required>
         <input type="password" name="signin_password" placeholder="   Password" class="password" required>
         <input type="submit" name="signin_submit" value="Sign in" class="signin">
