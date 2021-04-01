@@ -53,15 +53,18 @@ if (isset($_POST['signin_submit'])) {
     $password_signin = $_POST['signin_password'];
 
 
-    $signin_querry = "SELECT `user_email`, `user_password` FROM `users` WHERE `user_email`='$email_signin' AND `user_password`='$password_signin' ";
+    $signin_querry = "SELECT * FROM `users` WHERE `user_email`='$email_signin' AND `user_password`='$password_signin' ";
     $signin_resultat = mysqli_query($link, $signin_querry);
 
     if (mysqli_num_rows($signin_resultat) > 0) {
         $row = mysqli_fetch_assoc($signin_resultat);
 
         $_SESSION['username'] = $row['user_email'];
-
-        header("Location: ../index.php");
+        if ($row['user_role'] == "2") {
+            header("Location: ../TRAINER/index.php");
+        } else {
+            header("Location: ../STUDENT/index.php");
+        }
     } else {
         header("Location: ../signin.php?error=Sorry... username or password invalid");   //if isset
     }
