@@ -91,7 +91,7 @@ Vitrine de votre travail        </h1>
             </p>
             </span>
     </div>
-            <div class="card3">
+            <!-- <div class="card3">
         
     </div>
             <div class="card4">
@@ -114,7 +114,7 @@ Vitrine de votre travail        </h1>
     </div>
                     <div class="card10">
         
-    </div>
+    </div> -->
 </div>
 
 </div>
