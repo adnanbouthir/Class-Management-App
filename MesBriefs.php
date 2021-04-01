@@ -44,19 +44,17 @@ if (!$result_brief_display) {
         ?>
             <div class="briefscontainer<?php echo $i ?>">
 
-                <a href="./includes/MonBrief.php?id=">
-                    <div class="card">
-                        <img src="assets/images/<?php echo $row['brief_img'];  ?>" alt="briefimg">
+                <div class="card">
+                    <img src="assets/images/<?php echo $row['brief_img'];  ?>" alt="briefimg">
 
-                        <h1>
-                            <?php echo $row['brief_title'];  ?>
-                        </h1>
-                        <p>
-                            <?php echo $row['brief_content'];  ?>
-                        </p>
+                    <h1>
+                        <?php echo $row['brief_title'];  ?>
+                    </h1>
+                    <p>
+                        <?php echo $row['brief_content'];  ?>
+                    </p>
 
-                    </div>
-                </a>
+                </div>
 
             </div>
             <div class="inputcontainer<?php echo $i ?>">

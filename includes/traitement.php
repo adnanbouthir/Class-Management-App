@@ -40,10 +40,9 @@ if (isset($_POST['signup_submit'])) {
     } else if ($password_signup != $rpassword_signup) {
         $_SESSION['pass_no_match'] = "Password doesn't match";
     } else {
-
+        
         $password_signup = md5($password_signup);
-        $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password` ,`user_role`, `num_class`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup','2','0')";
-
+        $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup')";
 
         $result_signup = mysqli_query($link, $query_signup);
         header("Location: http://localhost/Class-Management-App/signin.php");
@@ -103,40 +102,13 @@ if (isset($_POST['add_brief'])) {
 
     $brief_content = $_POST['brief_content'];
 
-    $brief_class = $_POST['brief_class'];
-
-    $add_post_querry = "INSERT INTO `briefs`( `brief_title`, `brief_img`, `brief_tag`, `brief_comp`, `brief_deadline`, `brief_content`, `brief_class`) VALUES ('$brief_title','$brief_img','$brief_tag','$brief_comp','$brief_deadline','$brief_content',`$brief_class`)";
+    $add_post_querry = "INSERT INTO `briefs`( `brief_title`, `brief_img`, `brief_tag`, `brief_comp`, `brief_deadline`, `brief_content`) VALUES ('$brief_title','$brief_img','$brief_tag','$brief_comp','$brief_deadline','$brief_content')";
 
     $add_post_result = mysqli_query($link, $add_post_querry);
 
     if (!$add_post_result) {
-        var_dump($_POST);
-        mysqli_error($add_post_querry);
         die("Fatal error");
     }
 
     header("Location: Succes.php");
-}
-
-
-
-// trainer add class
-
-
-if (isset($_POST['add_class'])) {
-
-    $num_class = $_POST['num_class'];
-
-    $name_class = $_POST['name_class'];
-
-
-    if (!empty($num_class) || !empty($name_class)) {
-
-        $class_query = "INSERT INTO `class`(`num_class`, `name_class`) VALUES ('$num_class','$name_class')";
-
-        $class_result = mysqli_query($link, $class_query);
-    } else {
-
-        header("Location: addclass.php?empty");
-    }
 }
