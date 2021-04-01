@@ -8,7 +8,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(40, 1fr);
-    grid-template-rows: repeat(40, 1fr);
+    grid-template-rows: repeat(100, 1fr);
 
 }
 
@@ -99,46 +99,43 @@
     grid-column: 14;
     grid-row: 2;
 }
-
-
-.skillscontainer{
+.skillscontainer {
     background-color: white;
-    box-shadow: 5px 6px 11px 0px #888888;
-    grid-row: 3/11;
+    box-shadow: 1px 1px 11px 0px #888888;
+    grid-row: 5/20;
     grid-column: 2/40;
     border-radius: 20px;
 }
 
-.skills{
-align-self: flex-end;
-grid-row-end: 4;
-grid-column: 19/26;
-color: #00FFAA;
-font-weight: bold;
+.skills {
+    grid-row-start: 6;
+    grid-column: 19/26;
+    color: #00FFAA;
+    font-weight: bold;
 }
 
-.skillcontainer{
+.skillcontainer {
     background-color: white;
     box-shadow: -3px -1px 0px 4px #47AEE1;
-    grid-row: 5/10;
+    grid-row: 7/16;
     grid-column: 3/10;
     border-radius: 20px;
 }
 
 .todo {
     text-align: center;
-    grid-row: 6;
+    grid-row: 10;
     grid-column: 4/9;
 }
 
-.no{
+.no {
     grid-column: 4;
     grid-row: 8;
 }
 
-.no img{
-        height: 50%;
-        width: 50%;
+.no img {
+    height: 50%;
+    width: 50%;
 }
 
 .no2 {
@@ -168,22 +165,16 @@ font-weight: bold;
 .skillcontainer1 {
     background-color: white;
     box-shadow: -3px -1px 0px 4px #47AEE1;
-    grid-row: 5/10;
+    grid-row: 7/16;
     grid-column: 12/19;
     border-radius: 20px;
 }
 
 .todo1 {
     text-align: center;
-    grid-row: 6;
+    grid-row: 10;
     grid-column: 12/20;
 }
-
-
-
-
-
-
 
 .no3 {
     grid-column: 13;
@@ -217,29 +208,21 @@ font-weight: bold;
 }
 
 
-
 /* STYLE THIRD CARD */
-
 
 .skillcontainer2 {
     background-color: white;
     box-shadow: -3px -1px 0px 4px #47AEE1;
-    grid-row: 5/10;
+    grid-row: 7/16;
     grid-column: 23/30;
     border-radius: 20px;
 }
 
 .todo2 {
     text-align: center;
-    grid-row: 6;
+    grid-row: 10;
     grid-column: 23/30;
 }
-
-
-
-
-
-
 
 .no5 {
     grid-column: 24;
@@ -253,6 +236,7 @@ font-weight: bold;
 
 .no6 {
     grid-column: 26;
+
     grid-row: 8;
 }
 
@@ -276,26 +260,19 @@ font-weight: bold;
 
 
 /* STYLE FOURTH CARD */
-
 .skillcontainer3 {
     background-color: white;
     box-shadow: -3px -1px 0px 4px #47AEE1;
-    grid-row: 5/10;
+    grid-row: 7/16;
     grid-column: 32/39;
     border-radius: 20px;
 }
 
 .todo3 {
     text-align: center;
-    grid-row: 6;
+    grid-row: 10;
     grid-column: 32/39;
 }
-
-
-
-
-
-
 
 .no7 {
     grid-column: 33;
@@ -328,63 +305,66 @@ font-weight: bold;
     width: 50%;
 }
 
-.BriefImage{
-grid-column: 2/20;
-grid-row: 13/30;
+
+
+
+.BriefImage {
+    grid-column: 2/20;
+    grid-row: 25/40;
 }
 
-.BriefImage img{
+.BriefImage img {
     width: 70%;
     height: 100%;
 }
 
-.BriefImageContainer{
-    grid-row: 13/30;
+.BriefImageContainer {
+    grid-row: 25/40;
     grid-column: 3/15;
-    border: solid 1px black;
+    border: dashed 1px black;
 }
 
-.BriefContainer{
-        grid-row: 13/30;
-        grid-column: 16/39;
-        border: solid 1px black;
+.BriefContainer {
+    grid-row: 25/40;
+    grid-column: 16/39;
+    border: dashed 1px black;
 }
 
 
 .BriefTitleContainer {
-grid-column: 17/40;
-grid-row: 15;
+    grid-column: 17/40;
+    grid-row: 25;
 }
 
 .BriefContentContainer {
     grid-column: 17/38;
-    grid-row: 17;
+    grid-row: 26;
 }
 
 
 
 .BriefTagsContainer {
     background-color: #47AEE1;
-        grid-column: 17/38;
-        grid-row: 20/26;
-        border-radius: 10px;
+    grid-column: 17/38;
+    grid-row: 28/38;
+    border-radius: 10px;
 }
 
 
 
-.tag1{
-            background-color: white;
-            text-align: center;
-            grid-column: 18/22;
-            grid-row: 22/24;
-            border-radius: 20px;
+.tag1 {
+    background-color: white;
+    text-align: center;
+    grid-column: 18/22;
+    grid-row: 30/36;
+    border-radius: 20px;
 }
 
 .tag2 {
     background-color: white;
     text-align: center;
     grid-column: 24/26;
-    grid-row: 22/24;
+    grid-row: 30/36;
     border-radius: 20px;
 }
 
@@ -392,6 +372,46 @@ grid-row: 15;
     background-color: white;
     text-align: center;
     grid-column: 28/30;
-    grid-row: 22/24;
+    grid-row: 30/36;
     border-radius: 20px;
+}
+
+.tag4 {
+    background-color: white;
+    text-align: center;
+    grid-column: 32/35;
+    grid-row: 30/36;
+    border-radius: 20px;
+}
+
+.DeadLineContainer {
+    grid-column: 30/39;
+    grid-row: 42/48;
+
+}
+
+
+
+.DeadLineContainer img {
+    width: auto;
+    height: 200px;
+}
+
+.RectangleDeadline{
+    grid-column: 3/39;
+    background-color: rgb(255, 255, 255);
+    border: dashed 1px black;
+    grid-row: 45/93;
+}
+
+
+.BriefDeadlineContent{
+        grid-column: 4/38;
+        grid-row: 50;
+}
+
+
+.BriefDeadline{
+        grid-column: 4/38;
+        grid-row: 55;
 }

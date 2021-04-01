@@ -162,7 +162,7 @@ Level3
     
 </div>
 <div class="BriefContainer">
-    
+   
 </div>
 <div class="BriefTitleContainer">
     <h1>
@@ -185,7 +185,31 @@ Level3
 <div class="tag1">HTML5</div>
 <div class="tag2">P.H.P</div>
 <div class="tag3">MySQL</div>
+<div class="tag4">JavaScript</div>
 
+<div class="RectangleDeadline">
+    
+</div>
+
+
+<div class="DeadLineContainer">
+    <img src="assets/images/deadlineicon.svg" alt="deadlineicon">
+</div>
+
+
+<div class="BriefDeadlineContent">
+    <h1>
+Tic Tac Tic Tac Tic Tac...
+    </h1>
+</div>
+
+
+
+<div class="BriefDeadline">
+<p>
+    Il vous Rest X jours pour livré votre brief !
+</p>
+</div>
 
 
 
