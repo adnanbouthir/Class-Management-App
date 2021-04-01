@@ -8,8 +8,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(40, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
+    grid-template-rows:  0;
 }
 
 
@@ -103,8 +102,8 @@
 
 
 .MyWorksTitle{
-    display: flex;
-    width: 1280px;
-    height: 100%;
-    justify-content: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
+
