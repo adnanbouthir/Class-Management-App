@@ -13,6 +13,19 @@ if (isset($_POST['signup_submit'])) {
     $password_signup = $_POST['password'];
     $rpassword_signup = $_POST['rpassword'];
 
+// Clean form input :
+    $Fname_signup = strip_tags($Fname_signup);
+    $Fname_signup = str_replace(' ', '', $Fname_signup);
+    $Fname_signup = strtolower($Fname_signup);
+    
+    $Lname_signup = strip_tags($Lname_signup);
+    $Lname_signup = str_replace(' ', '', $Lname_signup);
+    $Lname_signup = strtolower($Lname_signup);
+
+    $email_signup = strip_tags($email_signup);
+    $email_signup = str_replace(' ', '', $email_signup);
+    $email_signup = strtolower($email_signup);
+
 
     session_start();
 
