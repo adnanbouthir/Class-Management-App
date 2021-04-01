@@ -8,8 +8,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(40, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
+    grid-template-rows:  0;
 }
 
 
@@ -103,8 +102,159 @@
 
 
 .MyWorksTitle{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+
+.cardscontainer{
     display: flex;
-    width: 1280px;
-    height: 100%;
+    width: 1260px;
+    height: 320px;
+    position: relative;
+    
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.card1 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 280px;
+    border-radius: 10px;
+
+}
+
+
+.card2 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+}
+
+.card3 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.card4 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.card5 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.card6 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+}
+
+
+.card7 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+}
+
+.card8 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+}
+
+.card9 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+}
+
+.card10 {
+    margin: 20px;
+    box-shadow: 2px 1px 5px 0px #bbbbbb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+}
+
+.bgcontainer{
+    display: flex;
+    width: 100%;
+    height: 40px;
+}
+
+.bgcontainer img{
+    width : 100%;
+    height: auto;
+
+}
+
+
+
+.cards h1{
+    font-size: 16px;
+    text-align: center;
+}
+.cards p {
+    font-size: 24px;
+    text-align: center;
+    color: green;
+}
+
+.circlecontainer{
+    height: 200px;
+    display: flex;
+    align-items: center;
     justify-content: center;
+}
+
+.circle{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #47E1AE;
+}
+
+.cards span  p{
+    color: red;
 }
