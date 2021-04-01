@@ -385,10 +385,9 @@
 }
 
 .DeadLineContainer {
-    grid-column: 3/39;
+    grid-column: 30/39;
     grid-row: 42/48;
-    background-color: rgb(255, 255, 255);
-    border: dashed 1px black;
+
 }
 
 
@@ -396,4 +395,11 @@
 .DeadLineContainer img {
     width: auto;
     height: 200px;
+}
+
+.RectangleDeadline{
+    grid-column: 3/39;
+    background-color: rgb(255, 255, 255);
+    border: dashed 1px black;
+    grid-row: 42/100;
 }
