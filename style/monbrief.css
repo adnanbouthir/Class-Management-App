@@ -361,3 +361,37 @@ grid-row: 15;
     grid-row: 17;
 }
 
+
+
+.BriefTagsContainer {
+    background-color: #47AEE1;
+        grid-column: 17/38;
+        grid-row: 20/26;
+        border-radius: 10px;
+}
+
+
+
+.tag1{
+            background-color: white;
+            text-align: center;
+            grid-column: 18/22;
+            grid-row: 22/24;
+            border-radius: 20px;
+}
+
+.tag2 {
+    background-color: white;
+    text-align: center;
+    grid-column: 24/26;
+    grid-row: 22/24;
+    border-radius: 20px;
+}
+
+.tag3 {
+    background-color: white;
+    text-align: center;
+    grid-column: 28/30;
+    grid-row: 22/24;
+    border-radius: 20px;
+}
