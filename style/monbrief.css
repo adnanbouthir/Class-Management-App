@@ -110,7 +110,7 @@
 }
 
 .skills{
-align-self: center;
+align-self: flex-end;
 grid-row-end: 4;
 grid-column: 3/7;
 color: #00FFAA;
@@ -127,6 +127,37 @@ font-weight: bold;
 
 .todo {
     text-align: center;
-    grid-row: 5;
+    grid-row: 6;
     grid-column: 4/9;
+}
+
+.no{
+    grid-column: 4;
+    grid-row: 8;
+}
+
+.no img{
+        height: 50%;
+        width: 50%;
+}
+
+.no2 {
+    grid-column: 6;
+    grid-row: 8;
+}
+
+.no2 img {
+    height: 50%;
+    width: 50%;
+}
+
+
+.yes {
+    grid-column: 8;
+    grid-row: 8;
+}
+
+.yes img {
+    height: 50%;
+    width: 50%;
 }
