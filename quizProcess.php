@@ -21,6 +21,7 @@ $result = mysqli_query($con, $query);
 
 $totalQuestions = mysqli_num_rows($result);
 
+
 $questionNumber = (int)$totalQuestions + 1;
 
 ?>
