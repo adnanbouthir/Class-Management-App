@@ -8,7 +8,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(40, 1fr);
-    grid-template-rows: repeat(20, 1fr);
+    grid-template-rows: repeat(40, 1fr);
 
 }
 
@@ -327,3 +327,37 @@ font-weight: bold;
     height: 50%;
     width: 50%;
 }
+
+.BriefImage{
+grid-column: 2/20;
+grid-row: 13/30;
+}
+
+.BriefImage img{
+    width: 70%;
+    height: 100%;
+}
+
+.BriefImageContainer{
+    grid-row: 13/30;
+    grid-column: 3/15;
+    border: solid 1px black;
+}
+
+.BriefContainer{
+        grid-row: 13/30;
+        grid-column: 16/39;
+        border: solid 1px black;
+}
+
+
+.BriefTitleContainer {
+grid-column: 17/40;
+grid-row: 15;
+}
+
+.BriefContentContainer {
+    grid-column: 17/38;
+    grid-row: 17;
+}
+
