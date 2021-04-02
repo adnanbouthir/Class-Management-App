@@ -132,7 +132,7 @@ if (isset($_POST['add_brief'])) {
     SELECT user_id , brief_id , '5'
     FROM users INNER JOIN briefs
     ON users.user_id = '$user_id' AND briefs.brief_id = '$brief_id' ";
-        $add_class_result = mysqli_query($link, $add_cl);
+        $add_class_result = mysqli_query($link, $add_class_brief);
     }
 
 
