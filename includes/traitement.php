@@ -40,7 +40,7 @@ if (isset($_POST['signup_submit'])) {
     } else if ($password_signup != $rpassword_signup) {
         $_SESSION['pass_no_match'] = "Password doesn't match";
     } else {
-        
+
         $password_signup = md5($password_signup);
         $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup')";
 
@@ -109,6 +109,7 @@ if (isset($_POST['add_brief'])) {
 
 
 
+
     $add_post_result = mysqli_query($link, $add_post_querry);
 
     if (!$add_post_result) {
@@ -116,5 +117,53 @@ if (isset($_POST['add_brief'])) {
         die("Fatal error");
     }
 
+
+
+    $query = "SELECT * FROM briefs INNER JOIN users ON briefs.brief_class = '$brief_class' AND users.num_class = '$brief_class' ";
+    $select_utilisateurs = mysqli_query($link, $query);
+
+    while ($row = mysqli_fetch_assoc($select_utilisateurs)) {
+        $user_id = $row['user_id'];
+        $brief_id = $row['brief_id'];
+
+
+
+        $add_class_brief = "INSERT INTO brief_status(user_id,brief_id,brief_status)
+    SELECT user_id , brief_id , '5'
+    FROM users INNER JOIN briefs
+    ON users.user_id = '$user_id' AND briefs.brief_id = '$brief_id' ";
+        $add_class_result = mysqli_query($link, $add_cl);
+    }
+
+
+
     header("Location: Succes.php");
+}
+
+
+
+
+
+
+
+
+if (isset($_GET['valider'])) {
+
+    $user_id_valider = $_GET['valider'];
+    $user_brief = $_GET['usbri'];
+
+    $query = "UPDATE `brief_status` SET `brief_status`= '1' WHERE  user_id = '$user_id_valider' AND brief_id = '$user_brief'";
+
+    $valider_query = mysqli_query($link, $query);
+    header("Location: valider.php");
+}
+if (isset($_GET['nonvalider'])) {
+
+    $user_id_valider = $_GET['nonvalider'];
+    $user_brief = $_GET['usbri'];
+
+    $query = "UPDATE `brief_status` SET `brief_status`= '0' WHERE  user_id = '$user_id_valider' AND brief_id = '$user_brief'";
+
+    $valider_query = mysqli_query($link, $query);
+    header("Location: nonvalider.php");
 }
