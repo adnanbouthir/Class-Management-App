@@ -29,21 +29,21 @@ if (!$result_brief_display) {
 </head>
 
 <body>
-<?php include "./includes/headerasset.php" ?>
+    <?php include "./includes/headerasset.php" ?>
 
 
 
-        <?php
+    <?php
 
-        $i = 1;
+    $i = 1;
 
-        foreach ($result_brief_display as $row) :
+    foreach ($result_brief_display as $row) :
 
 
 
-        ?>
-            <div class="briefscontainer<?php echo $i ?>">
-
+    ?>
+        <div class="briefscontainer<?php echo $i ?>">
+            <a href="./MonBrief.php?id=<?php echo $row['brief_id']  ?>">
                 <div class="card">
                     <img src="assets/images/<?php echo $row['brief_img'];  ?>" alt="briefimg">
 
@@ -56,14 +56,15 @@ if (!$result_brief_display) {
 
                 </div>
 
-            </div>
-            <div class="inputcontainer<?php echo $i ?>">
-                <input type="submit" name="mybriefsubmit" id="" value="SUBMIT">
-            </div>
+        </div>
+        </a>
+        <div class="inputcontainer<?php echo $i ?>">
+            <input type="submit" name="mybriefsubmit" id="" value="SUBMIT">
+        </div>
 
-        <?php
-            $i++;
-        endforeach;  ?>
+    <?php
+        $i++;
+    endforeach;  ?>
 
 
 
