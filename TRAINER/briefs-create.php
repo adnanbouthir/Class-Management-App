@@ -32,6 +32,26 @@
             <input class="form-control" type="text" name="brief_comp">
         </div>
         <div class="form-group">
+
+            <label for="brief_comp">Brief class</label>
+            <select name="brief_class" id="distable" class="form-control">
+
+                <?php
+                $display_class_query = "SELECT * FROM `class`";
+
+                $class_result = mysqli_query($link, $display_class_query);
+                foreach ($class_result as $row) {
+                    $name_class = $row['name_class'];
+                    $num_class = $row['num_class'];
+                    echo "<option value='$num_class'>$name_class</option>";
+                }
+
+                ?>
+
+            </select>
+        </div>
+        <div class="form-group">
+
             <label for="brief_image">Brief Image</label>
             <input class="form-control" type="file" name="brief_img">
         </div>
