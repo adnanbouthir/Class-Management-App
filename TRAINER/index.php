@@ -64,9 +64,10 @@ include_once("../includes/database.php");
                     echo "<td>$user_birthday</td>";
                     echo "<td>$num_class</td>";
                     echo "<td>$user_email</td>";
-                    echo "<td> <a href='./index.php?delete=$user_id'> Delete </a>/<a href='././index.php?update=$user_id'> Update </a></td>";
+                    echo "<a href='./edituser.php?delete=$user_id'> Delete </a>/<a href='././edituser.php?update=$user_id'> Update </a></td>";
                     echo "</tr>";
                 }
+
 
                 ?>
 

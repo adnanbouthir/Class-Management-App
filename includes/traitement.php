@@ -69,7 +69,7 @@ if (isset($_POST['signin_submit'])) {
         if ($row['user_role'] == "2") {
             header("Location: ../TRAINER/index.php");
         } else {
-            header("Location: ../STUDENT/index.php");
+            header("Location: ../MesBriefs.php");
         }
     } else {
         header("Location: ../signin.php?error=Sorry... username or password invalid");   //if isset
