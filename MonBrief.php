@@ -119,39 +119,8 @@
 
 
 
-    <div class="BriefImage">
-        <img src="assets/images/imgbrief.png" alt="">
-    </div>
-    <div class="BriefImageContainer">
+    <!-- start deadline -->
 
-    </div>
-    <div class="BriefContainer">
-
-    </div>
-    <div class="BriefTitleContainer">
-        <h1>
-            Boite à Commentaires.
-        </h1>
-    </div>
-    <div class="BriefContentContainer">
-        <p>
-            On vous a assigné la tâche d'améliorer une application boîte à commentaire similaire aux commentaires d'un
-            mur Facebook. Votre tâche consiste à prendre le code source de l'application existante et améliorer:
-            le rendu visuelle, vous avez la carte banche pour refaire la charte graphique et utiliser les technologies
-            ou framework qui vous semble bien (HTML / CSS ou SASS, Bootsrap, tailwind....)
-            Implémenter la fonctionnalité d'insertion des commentaires
-            Pour plus de détails, merci de voir le lien notion partagé sur discord
-        </p>
-    </div>
-
-
-    <div class="BriefTagsContainer">
-
-    </div>
-    <div class="tag1">HTML5</div>
-    <div class="tag2">P.H.P</div>
-    <div class="tag3">MySQL</div>
-    <div class="tag4">JavaScript</div>
 
     <div class="RectangleDeadline">
 
@@ -181,7 +150,49 @@
 
 
 
+
+
+
+    <div class="BriefImage">
+        <img src="assets/images/imgbrief.png" alt="">
     </div>
+    <div class="BriefImageContainer">
+
+    </div>
+    <div class="BriefContainer">
+
+    </div>
+    <div class="BriefTitleContainer">
+        <h1>
+            Boite à Commentaires.
+        </h1>
+    </div>
+    <div class="BriefContentContainer">
+        <p>
+            On vous a assigné la tâche d'améliorer une application boîte à commentaire similaire aux commentaires d'un mur Facebook. Votre tâche consiste à prendre le code source de l'application existante et améliorer:
+            le rendu visuelle, vous avez la carte banche pour refaire la charte graphique et utiliser les technologies ou framework qui vous semble bien (HTML / CSS ou SASS, Bootsrap, tailwind....)
+            Implémenter la fonctionnalité d'insertion des commentaires
+            Pour plus de détails, merci de voir le lien notion partagé sur discord
+        </p>
+    </div>
+
+
+    <div class="BriefTagsContainer">
+
+    </div>
+    <div class="tag1">HTML5</div>
+    <div class="tag2">P.H.P</div>
+    <div class="tag3">MySQL</div>
+    <div class="tag4">JavaScript</div>
+
+
+
+
+
+
+
+
+
 
 
 
