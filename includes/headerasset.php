@@ -6,7 +6,7 @@
                 <div class="menu">
                     <li>
                         <ul>
-                            <a href="./MesBriefs.php"> My Briefs </a>
+                            <a href="../MesBriefs.php"> My Briefs </a>
                         </ul>
                     </li>
                     <li>

@@ -1,3 +1,22 @@
+<?php
+include_once("./includes/database.php");
+if (isset($_GET['id'])) {
+
+    var_dump($_GET);
+
+    $id_brief = $_GET['id'];
+    $query_brief_display = "SELECT * FROM `briefs` WHERE `brief_id` = '$id_brief' ";
+    $result_brief_display = mysqli_query($link, $query_brief_display);
+    if (!$result_brief_display) {
+        die("Connection X");
+    }
+} else {
+    header("Location: error.php");
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -119,69 +138,87 @@
 
 
 
-    <div class="BriefImage">
-        <img src="assets/images/imgbrief.png" alt="">
-    </div>
-    <div class="BriefImageContainer">
+    <!-- start deadline -->
+    <?php
 
-    </div>
-    <div class="BriefContainer">
+    $i = 1;
 
-    </div>
-    <div class="BriefTitleContainer">
-        <h1>
-            Boite à Commentaires.
-        </h1>
-    </div>
-    <div class="BriefContentContainer">
-        <p>
-            On vous a assigné la tâche d'améliorer une application boîte à commentaire similaire aux commentaires d'un
-            mur Facebook. Votre tâche consiste à prendre le code source de l'application existante et améliorer:
-            le rendu visuelle, vous avez la carte banche pour refaire la charte graphique et utiliser les technologies
-            ou framework qui vous semble bien (HTML / CSS ou SASS, Bootsrap, tailwind....)
-            Implémenter la fonctionnalité d'insertion des commentaires
-            Pour plus de détails, merci de voir le lien notion partagé sur discord
-        </p>
-    </div>
-
-
-    <div class="BriefTagsContainer">
-
-    </div>
-    <div class="tag1">HTML5</div>
-    <div class="tag2">P.H.P</div>
-    <div class="tag3">MySQL</div>
-    <div class="tag4">JavaScript</div>
-
-    <div class="RectangleDeadline">
-
-    </div>
-
-
-    <div class="DeadLineContainer">
-        <img src="assets/images/deadlineicon.svg" alt="deadlineicon">
-    </div>
-
-
-    <div class="BriefDeadlineContent">
-        <h1>
-            Tic Tac Tic Tac Tic Tac...
-        </h1>
-    </div>
+    foreach ($result_brief_display as $row) :
 
 
 
-    <div class="BriefDeadline">
-        <p>
-            Il vous Rest X jours pour livré votre brief !
-        </p>
-    </div>
+    ?>
+
+        <div class="RectangleDeadline">
+
+        </div>
+
+
+        <div class="DeadLineContainer">
+            <img src="assets/images/deadlineicon.svg" alt="deadlineicon">
+        </div>
+
+
+        <div class="BriefDeadlineContent">
+            <h1>
+                Tic Tac Tic Tac Tic Tac...
+            </h1>
+        </div>
+
+
+
+        <div class="BriefDeadline">
+            <p>
+                Il vous Rest X jours pour livré votre brief !
+            </p>
+        </div>
 
 
 
 
 
-    </div>
+
+
+
+        <div class="BriefImage">
+            <img src="assets/images/<?php echo $row['brief_img'];  ?>" alt="">
+        </div>
+        <div class="BriefImageContainer">
+
+        </div>
+        <div class="BriefContainer">
+
+        </div>
+        <div class="BriefTitleContainer">
+            <h1>
+                <?php echo $row['brief_title'];  ?>
+            </h1>
+        </div>
+        <div class="BriefContentContainer">
+            <p>
+                <?php echo $row['brief_content'];  ?>
+            </p>
+        </div>
+
+
+        <div class="BriefTagsContainer">
+
+        </div>
+        <div class="tag1">HTML5</div>
+        <div class="tag2">P.H.P</div>
+        <div class="tag3">MySQL</div>
+        <div class="tag4">JavaScript</div>
+
+
+
+
+
+
+
+
+    <?php
+
+    endforeach;  ?>
 
 
 

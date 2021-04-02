@@ -29,43 +29,42 @@ if (!$result_brief_display) {
 </head>
 
 <body>
-<?php include "./includes/headerasset.php" ?>
+    <?php include "./includes/headerasset.php" ?>
 
 
 
-        <?php
+    <?php
 
-        $i = 1;
+    $i = 1;
 
-        foreach ($result_brief_display as $row) :
+    foreach ($result_brief_display as $row) :
 
 
 
-        ?>
-            <div class="briefscontainer<?php echo $i ?>">
+    ?>
+        <div class="briefscontainer<?php echo $i ?>">
+            <a href="./MonBrief.php?id=<?php echo $row['brief_id']  ?>">
+                <div class="card">
+                    <img src="assets/images/<?php echo $row['brief_img'];  ?>" alt="briefimg">
 
-                <a href="./includes/MonBrief.php?id=">
-                    <div class="card">
-                        <img src="assets/images/<?php echo $row['brief_img'];  ?>" alt="briefimg">
+                    <h1>
+                        <?php echo $row['brief_title'];  ?>
+                    </h1>
+                    <p>
+                        <?php echo $row['brief_content'];  ?>
+                    </p>
 
-                        <h1>
-                            <?php echo $row['brief_title'];  ?>
-                        </h1>
-                        <p>
-                            <?php echo $row['brief_content'];  ?>
-                        </p>
+                </div>
 
-                    </div>
-                </a>
+        </div>
+        </a>
+        <div class="inputcontainer<?php echo $i ?>">
+            <input type="submit" name="mybriefsubmit" id="" value="SUBMIT">
+        </div>
 
-            </div>
-            <div class="inputcontainer<?php echo $i ?>">
-                <input type="submit" name="mybriefsubmit" id="" value="SUBMIT">
-            </div>
-
-        <?php
-            $i++;
-        endforeach;  ?>
+    <?php
+        $i++;
+    endforeach;  ?>
 
 
 
