@@ -39,7 +39,6 @@
                 $display_class_query = "SELECT * FROM `class`";
 
                 $class_result = mysqli_query($link, $display_class_query);
-                echo "<option value='$zero'>CHOOSE CLASS</option>";
                 foreach ($class_result as $row) {
                     $name_class = $row['name_class'];
                     $num_class = $row['num_class'];
