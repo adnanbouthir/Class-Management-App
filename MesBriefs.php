@@ -1,6 +1,6 @@
 <?php
 include_once("./includes/database.php");
-$query_brief_display = "SELECT * FROM `briefs` ";
+$query_brief_display = "SELECT * FROM `briefs`";   // WHERE BRIEF CLASS = USER CLASS
 $result_brief_display = mysqli_query($link, $query_brief_display);
 if (!$result_brief_display) {
     die("Connection X");
