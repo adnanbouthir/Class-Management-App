@@ -2,7 +2,6 @@
 include_once("./includes/database.php");
 if (isset($_GET['id'])) {
 
-    var_dump($_GET);
 
     $id_brief = $_GET['id'];
     $query_brief_display = "SELECT * FROM `briefs` WHERE `brief_id` = '$id_brief' ";

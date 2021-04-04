@@ -1,5 +1,5 @@
 <?php include_once("../includes/database.php");  ?>
-
+<a href="./index.php"><input class="btn btn-primary" type="submit" value="Return" name="Return "></a>
 <!DOCTYPE html>
 <html lang="en">
 

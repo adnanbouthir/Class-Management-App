@@ -1,6 +1,7 @@
 <?php include_once("../includes/database.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
+<a href="./index.php"><input class="btn btn-primary" type="submit" value="Return" name="Return "></a>
 
 <head>
     <meta charset="UTF-8">
@@ -95,7 +96,7 @@
                     echo "<td>$num_class</td>";
                     echo "<td>$user_brief</td>";
 
-                    $validation_check_query = "SELECT * FROM `brief_status` WHERE `user_id` = '$user_id' AND `brief_id` = '$brief_id'";
+                    $validation_check_query = "SELECT * FROM `brief_status` WHERE `user_id` = '$user_id' AND `brief_id` = '$brief_id' AND `brief_status` = '1' OR '0'";
                     $result_validation = mysqli_query($link, $validation_check_query);
 
                     $row = mysqli_fetch_assoc($result_validation);

@@ -1,3 +1,4 @@
+<a href="./index.php"><input class="btn btn-primary" type="submit" value="Return" name="Return "></a>
 <?php include_once("../includes/database.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,16 +23,14 @@
 
 
 <form action="./Liste_student.php" method="POST">
-    <?php //assignclass.php 
-    $zero = "0";
-    ?>
+
     <select name="num_class" id="distable">
 
         <?php
         $display_class_query = "SELECT * FROM `class`";
 
         $class_result = mysqli_query($link, $display_class_query);
-        echo "<option value='$zero'>NO CLASS</option>";
+
         foreach ($class_result as $row) {
             $name_class = $row['name_class'];
             $num_class = $row['num_class'];
@@ -50,7 +49,7 @@
 <!-- Display class list -->
 
 
-<?php if (!empty($_POST['num_class'])) :
+<?php if (isset($_POST['num_class'])) :
     $num_class = $_POST['num_class'];
     $display_class_membre = "SELECT * FROM `users` WHERE `num_class`='$num_class'";
     $membre_result = mysqli_query($link, $display_class_membre);

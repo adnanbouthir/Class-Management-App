@@ -1,10 +1,14 @@
 <?php
+session_start();
+$num_class = $_SESSION['num_class'];
+
 include_once("./includes/database.php");
-$query_brief_display = "SELECT * FROM `briefs`";   // WHERE BRIEF CLASS = USER CLASS
+$query_brief_display = "SELECT * FROM `briefs` WHERE `brief_class` = '$num_class'  ";   // WHERE BRIEF CLASS = USER CLASS
 $result_brief_display = mysqli_query($link, $query_brief_display);
 if (!$result_brief_display) {
     die("Connection X");
 }
+
 ?>
 
 
@@ -34,41 +38,45 @@ if (!$result_brief_display) {
 
 
     <?php
+    if (mysqli_num_rows($result_brief_display) > 0) {
+        $i = 1;
 
-    $i = 1;
-
-    foreach ($result_brief_display as $row) :
+        foreach ($result_brief_display as $row) :
 
 
 
     ?>
-        <div class="briefscontainer<?php echo $i ?>">
-            <a href="./MonBrief.php?id=<?php echo $row['brief_id']  ?>">
-                <div class="card">
-                    <img src="assets/images/<?php echo $row['brief_img'];  ?>" alt="briefimg">
+            <div class="briefscontainer<?php echo $i ?>">
+                <a href="./MonBrief.php?id=<?php echo $row['brief_id']  ?>">
+                    <div class="card">
+                        <img src="assets/images/<?php echo $row['brief_img'];  ?>" alt="briefimg">
 
-                    <h1>
-                        <?php echo $row['brief_title'];  ?>
-                    </h1>
-                    <p>
-                        <?php echo $row['brief_content'];  ?>
-                    </p>
+                        <h1>
+                            <?php echo $row['brief_title'];  ?>
+                        </h1>
+                        <p>
+                            <?php echo $row['brief_content'];  ?>
+                        </p>
 
-                </div>
+                    </div>
 
-        </div>
-        </a>
-        <div class="inputcontainer<?php echo $i ?>">
-            <input type="submit" name="mybriefsubmit" id="" value="SUBMIT">
-        </div>
+            </div>
+            </a>
+            <div class="inputcontainer<?php echo $i ?>">
+                <input type="submit" name="mybriefsubmit" id="" value="SUBMIT">
+            </div>
 
-    <?php
-        $i++;
-    endforeach;  ?>
+        <?php
+            $i++;
+        endforeach;
+    } else {
 
 
+        ?>
+        <h1 style="color: red; position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)">Pas de Brief en cours</h1>
 
 
+    <?php  } ?>
 
     </div>
 

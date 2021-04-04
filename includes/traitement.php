@@ -35,14 +35,14 @@ if (isset($_POST['signup_submit'])) {
     $email_query = "SELECT * FROM `users` WHERE user_email ='$email_signup'";
     $email_resultat = mysqli_query($link, $email_query);
     if (mysqli_num_rows($email_resultat) > 0) {
-        $_SESSION['email_taken'] = "Sorry... email already taken";
+        // $_SESSION['email_taken'] = "Sorry... email already taken";
         header("Location: ../signup.php");
     } else if ($password_signup != $rpassword_signup) {
-        $_SESSION['pass_no_match'] = "Password doesn't match";
+        // $_SESSION['pass_no_match'] = "Password doesn't match";
     } else {
 
         $password_signup = md5($password_signup);
-        $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup')";
+        $query_signup = "INSERT INTO `users`( `user_fname`, `user_lname`, `user_birthday`, `user_email`, `user_password` , `user_role`) VALUES ('$Fname_signup','$Lname_signup','$birthday_signup','$email_signup','$password_signup','1')";
 
         $result_signup = mysqli_query($link, $query_signup);
         header("Location: http://localhost/Class-Management-App/signin.php");
@@ -66,6 +66,8 @@ if (isset($_POST['signin_submit'])) {
         $row = mysqli_fetch_assoc($signin_resultat);
 
         $_SESSION['username'] = $row['user_email'];
+        $_SESSION['user_id'] = $row['user_id'];
+        $_SESSION['num_class'] = $row['num_class'];
         if ($row['user_role'] == "2") {
             header("Location: ../TRAINER/index.php");
         } else {
@@ -117,9 +119,13 @@ if (isset($_POST['add_brief'])) {
         die("Fatal error");
     }
 
+    $brief_query = "SELECT * FROM briefs ORDER BY `brief_id`DESC LIMIT 1  ";
+    $result_brief = mysqli_query($link, $brief_query);
+    $raw = mysqli_fetch_assoc($result_brief);
+    $brief_id_unique = $raw['brief_id'];
 
 
-    $query = "SELECT * FROM briefs INNER JOIN users ON briefs.brief_class = '$brief_class' AND users.num_class = '$brief_class' ";
+    $query = "SELECT * FROM briefs INNER JOIN users ON briefs.brief_class = '$brief_class' AND users.num_class = '$brief_class'";
     $select_utilisateurs = mysqli_query($link, $query);
 
     while ($row = mysqli_fetch_assoc($select_utilisateurs)) {
@@ -131,7 +137,8 @@ if (isset($_POST['add_brief'])) {
         $add_class_brief = "INSERT INTO brief_status(user_id,brief_id,brief_status)
     SELECT user_id , brief_id , '5'
     FROM users INNER JOIN briefs
-    ON users.user_id = '$user_id' AND briefs.brief_id = '$brief_id' ";
+    ON users.user_id = '$user_id' AND briefs.brief_id = '$brief_id'
+    WHERE users.user_role = '1' AND briefs.brief_id = '$brief_id_unique' ";
         $add_class_result = mysqli_query($link, $add_class_brief);
     }
 
@@ -145,7 +152,7 @@ if (isset($_POST['add_brief'])) {
 
 
 
-
+//validation
 
 if (isset($_GET['valider'])) {
 
@@ -166,4 +173,24 @@ if (isset($_GET['nonvalider'])) {
 
     $valider_query = mysqli_query($link, $query);
     header("Location: nonvalider.php");
+}
+
+
+//update class
+
+
+if (isset($_POST['update_class'])) {
+
+    $num_class = $_POST['num_class'];
+    $user_id = $_POST['user_id'];
+
+    $update_class_query = "UPDATE `users` SET `num_class` = '$num_class' WHERE `user_id` = '$user_id' ";
+    $update_result = mysqli_query($link, $update_class_query);
+
+
+    if (!$update_result) {
+        die("fatal error");
+    } else {
+        header("Location: ../TRAINER/index.php");
+    }
 }
