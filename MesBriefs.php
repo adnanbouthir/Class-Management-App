@@ -69,7 +69,7 @@ if (!$result_brief_display) {
 
             </div>
             </a>
-            <div class="inputcontainer<?php echo $i ?>">
+            <div class=" inputcontainer<?php echo $i ?>">
                 <input type="submit" name="mybriefsubmit" id="" value="SUBMIT">
             </div>
 
