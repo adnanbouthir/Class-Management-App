@@ -51,7 +51,7 @@
 
 <?php if (isset($_POST['num_class'])) :
     $num_class = $_POST['num_class'];
-    $display_class_membre = "SELECT * FROM `users` WHERE `num_class`='$num_class'";
+    $display_class_membre = "SELECT * FROM `users` WHERE `num_class`='$num_class' AND `user_role`='1' ";
     $membre_result = mysqli_query($link, $display_class_membre);
 
     if (mysqli_num_rows($membre_result) > 0) {

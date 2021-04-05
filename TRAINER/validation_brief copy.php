@@ -85,7 +85,7 @@
 
 
 
-                $query = "SELECT * FROM briefs INNER JOIN users ON briefs.brief_class = '$brief_class' AND users.num_class = '$brief_class'  WHERE `user_role`='1' AND `is_done`= '0'";
+                $query = "SELECT * FROM briefs INNER JOIN users INNER JOIN brief_status ON briefs.brief_class = '$brief_class' AND users.num_class = '$brief_class' AND briefs.brief_id = brief_status.id WHERE `user_role`='1' AND `is_done`= '0'";
                 $select_utilisateurs = mysqli_query($link, $query);
 
                 while ($row = mysqli_fetch_assoc($select_utilisateurs)) {

@@ -107,7 +107,7 @@ if (isset($_POST['add_brief'])) {
 
     $brief_class = $_POST['brief_class'];
 
-    $add_post_querry = "INSERT INTO `briefs`( `brief_title`, `brief_img`, `brief_tag`, `brief_comp`, `brief_deadline`, `brief_content`, `brief_class`) VALUES ('$brief_title','$brief_img','$brief_tag','$brief_comp','$brief_deadline','$brief_content','$brief_class')";
+    $add_post_querry = "INSERT INTO `briefs`( `brief_title`, `brief_img`, `brief_tag`, `brief_comp`, `brief_deadline`, `brief_content`, `brief_class` , `is_done`) VALUES ('$brief_title','$brief_img','$brief_tag','$brief_comp','$brief_deadline','$brief_content','$brief_class' , '0')";
 
 
 
@@ -152,6 +152,13 @@ if (isset($_POST['add_brief'])) {
 
 
 
+
+
+
+
+
+
+
 //validation
 
 if (isset($_GET['valider'])) {
@@ -162,7 +169,7 @@ if (isset($_GET['valider'])) {
     $query = "UPDATE `brief_status` SET `brief_status`= '1' WHERE  user_id = '$user_id_valider' AND brief_id = '$user_brief'";
 
     $valider_query = mysqli_query($link, $query);
-    header("Location: valider.php");
+    // header("Location: valider.php");
 }
 if (isset($_GET['nonvalider'])) {
 
@@ -172,7 +179,7 @@ if (isset($_GET['nonvalider'])) {
     $query = "UPDATE `brief_status` SET `brief_status`= '0' WHERE  user_id = '$user_id_valider' AND brief_id = '$user_brief'";
 
     $valider_query = mysqli_query($link, $query);
-    header("Location: nonvalider.php");
+    // header("Location: nonvalider.php");
 }
 
 
