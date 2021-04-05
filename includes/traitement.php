@@ -71,7 +71,7 @@ if (isset($_POST['signin_submit'])) {
         if ($row['user_role'] == "2") {
             header("Location: ../TRAINER/index.php");
         } else {
-            header("Location: ../MesBriefs.php");
+            header("Location: ../TRAINER/MesBriefs.php");
         }
     } else {
         header("Location: ../signin.php?error=Sorry... username or password invalid");   //if isset
@@ -144,7 +144,7 @@ if (isset($_POST['add_brief'])) {
 
 
 
-    header("Location: Succes.php");
+    header("Location: ../TRAINER/Briefs.php");
 }
 
 
@@ -169,7 +169,7 @@ if (isset($_GET['valider'])) {
     $query = "UPDATE `brief_status` SET `brief_status`= '1' WHERE  user_id = '$user_id_valider' AND brief_id = '$user_brief'";
 
     $valider_query = mysqli_query($link, $query);
-    // header("Location: valider.php");
+    header("Location: https://localhost/Class-Management-App/TRAINER/validation_brief.php");
 }
 if (isset($_GET['nonvalider'])) {
 
@@ -179,7 +179,7 @@ if (isset($_GET['nonvalider'])) {
     $query = "UPDATE `brief_status` SET `brief_status`= '0' WHERE  user_id = '$user_id_valider' AND brief_id = '$user_brief'";
 
     $valider_query = mysqli_query($link, $query);
-    // header("Location: nonvalider.php");
+    header("Location: https://localhost/Class-Management-App/TRAINER/validation_brief.php");
 }
 
 

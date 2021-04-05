@@ -1,4 +1,4 @@
-<a href="./index.php"><input class="btn btn-primary" type="submit" value="Return" name="Return "></a>
+<a href="https://localhost/Class-Management-App/TRAINER/Briefs.php"><input class="btn btn-primary" type="submit" value="Return" name="Return "></a>
 <!DOCTYPE html>
 <html lang="en">
 

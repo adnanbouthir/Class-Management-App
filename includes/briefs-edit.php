@@ -18,7 +18,7 @@ if (isset($_GET['updatebrief'])) {
     $brief_status = $row['is_done'];
 
 ?>
-    <a href="../index.php"><input class="btn btn-primary" type="submit" value="Return" name="Return "></a>
+    <a href="https://localhost/Class-Management-App/TRAINER/Briefs.php"><input class="btn btn-primary" type="submit" value="Return" name="Return "></a>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -167,7 +167,7 @@ if (isset($_POST['update_brief'])) {
     }
 
 
-    header("Location: Succes.php");
+    header("Location: https://localhost/Class-Management-App/TRAINER/Briefs.php");
 }
 
 

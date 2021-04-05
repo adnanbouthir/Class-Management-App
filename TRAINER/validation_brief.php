@@ -104,7 +104,7 @@
                     echo "<td>$num_class</td>";
                     echo "<td>$user_brief</td>";
 
-                    $validation_check_query = "SELECT * FROM `brief_status` WHERE `user_id` = '$user_id' AND `brief_id` = '$brief_id' AND `brief_status` = '1' OR '0'";
+                    $validation_check_query = "SELECT * FROM `brief_status` WHERE `user_id` = '$user_id' AND `brief_id` = '$brief_id' AND `brief_status` = '1' OR `brief_status` = '0'";
                     $result_validation = mysqli_query($link, $validation_check_query);
 
                     $row = mysqli_fetch_assoc($result_validation);
@@ -115,8 +115,7 @@
                         if ($row['brief_status'] == 1) {
                             echo "<td> brief validé </td>";
                         } elseif ($row['brief_status'] == 0) {
-
-                            echo "<td> brief non validé </td>";
+                            echo "<td> brief non validé</td>";
                         } else {
                             echo $row['brief_status'];
                             echo "<td> <a style='color:green;'href='../includes/traitement.php?valider=$user_id&usbri=$brief_id'> Valider </a>/<a style='color:red;' href='../includes/traitement.php?nonvalider=$user_id&usbri=$brief_id'> Ne pas valider </a></td>";

@@ -71,7 +71,7 @@ include_once("../includes/database.php");
         <a href="./add_class.php"><input class="btn btn-primary" type="submit" value="Add Class" name="add_class"></a>
 
         <a href="./validation_brief.php"><input class="btn btn-primary" type="submit" value="Validation" name="validation_bief"></a>
-
+        <a href="./Briefs.php"><input class="btn btn-primary" type="submit" value="My Briefs" name="briefs"></a>
 
         <a href="./index.php"><input class="btn btn-primary" type="submit" value="Return" name="Return "></a>
 

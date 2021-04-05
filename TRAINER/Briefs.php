@@ -1,3 +1,5 @@
+<a href="./index.php"><input class="btn btn-primary" type="submit" value="Return" name="Return "></a>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,7 +81,7 @@ if (!$result_brief_display) {
             }
 
 
-            echo "<td> <a style='color:green;'href='../includes/briefs-edit.php?updatebrief=$brief_id'> Update </a>/<a style='color:red;' href='../includes/brief_delte.php?deletebrief=$brief_id'> Delete </a></td>";
+            echo "<td> <a style='color:green;'href='../includes/briefs-edit.php?updatebrief=$brief_id'> Update </a>/<a style='color:red;' href='../includes/brief_delete.php?deletebrief=$brief_id'> Delete </a></td>";
             echo "</tr>";
         }
     } else {

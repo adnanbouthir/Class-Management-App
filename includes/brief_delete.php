@@ -1,7 +1,7 @@
 
 
 <?php
-include_once("./includes/database.php");
+include_once("../includes/database.php");
 
 if (isset($_GET['deletebrief'])) {
 
@@ -10,4 +10,5 @@ if (isset($_GET['deletebrief'])) {
     $query_delete = "DELETE FROM `briefs` WHERE `brief_id` = '$delete_id'";
 
     $result_delete = mysqli_query($link, $query_delete);
+    header("Location:https://localhost/Class-Management-App/TRAINER/Briefs.php");
 }
