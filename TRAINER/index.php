@@ -119,7 +119,7 @@ include_once("../includes/database.php");
                         echo "<td>$user_birthday</td>";
                         echo "<td>$num_class</td>";
                         echo "<td>$user_email</td>";
-                        echo "<td><a href='./edituser.php?delete=$user_id'> Delete </a>/<a href='././edituser.php?update=$user_id'> Update </a></td>";
+                        echo "<td><a href='./index.php?delete=$user_id'> Delete </a>/<a href='././edituser.php?update=$user_id'> Update </a></td>";
                         echo "</tr>";
                     }
 
@@ -139,7 +139,7 @@ include_once("../includes/database.php");
                 $query = "DELETE FROM users WHERE user_id = {$del_user_id}";
 
                 $delete_query = mysqli_query($link, $query);
-                header('Location: deletedbytrainer.php');
+                header('Location: https://localhost/Class-Management-App/TRAINER/Liste_student.php');
             }
 
                 ?>

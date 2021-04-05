@@ -28,6 +28,13 @@ if (!$result_brief_display) {
             height: 110px;
             overflow: hidden;
             text-overflow: ellipsis;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+
         }
     </style>
 </head>
